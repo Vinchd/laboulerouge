@@ -1,5 +1,219 @@
 @import "tailwindcss";
 
 @theme inline {
+  --color-primary: #0d0200;
+  --color-secondary: #e3d7c9;
   --font-sackersgothic: var(--font-sackersgothic);
+}
+
+/* ----- HIDE SCROLLBAR ----- */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* ----- NAV ----- */
+.navNaviconLine {
+  background-color: currentColor;
+  width: 100%;
+  height: 4px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  display: block;
+  transform-origin: 4px 0px;
+  transition:
+    transform 0.8s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.8s cubic-bezier(0.77, 0.2, 0.05, 1),
+    opacity 0.55s ease;
+}
+
+.navNaviconLine.first {
+  transform-origin: 0% 0%;
+}
+
+.navNaviconLine.second,
+.navNaviconLine.third {
+  transform-origin: 0% 100%;
+}
+
+.navBar {
+  padding: 50px 50px;
+  position: fixed;
+  z-index: 99999;
+}
+
+@media (width < 40rem) {
+  .navBar {
+    padding: 35px 35px;
+  }
+}
+
+.navToggle {
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  cursor: pointer;
+  float: right;
+}
+
+.navToggle:not(.active):hover .navNaviconLine.first {
+  transform: translate(0, 2px);
+}
+
+.navToggle:not(.active):hover .navNaviconLine.third {
+  transform: translate(0, -2px);
+}
+
+.navNavicon {
+  vertical-align: middle;
+  width: 33px;
+  height: 20px;
+  display: inline-block;
+}
+
+.navToggle.active {
+  color: var(--color-primary);
+}
+
+.navToggle.active .navNaviconLine {
+  background-color: var(--color-primary);
+}
+
+.navToggle.active .navNaviconLine.first {
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+
+.navToggle.active .navNaviconLine.second {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.navToggle.active .navNaviconLine.third {
+  transform: rotate(-45deg) translate(-2px, 1px);
+}
+
+.navMenuBg {
+  background-color: var(--color-secondary);
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+  position: fixed;
+  z-index: 99998;
+  box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.75) inset;
+}
+
+.navMenu {
+  color: #000;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  z-index: 99998;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.navMenuContainer {
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.navMenu li {
+  font-size: clamp(16px, 3.5vw, 24px);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.8s ease;
+  letter-spacing: 2px;
+}
+
+.navMenu li.active a {
+  color: var(--color-primary);
+  font-weight: 600;
+  opacity: 1;
+}
+
+.navMenu a {
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  transition: all 0.8s ease;
+  position: relative;
+  opacity: 0.6;
+}
+
+.navMenu a:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.navMenu a:hover:after {
+  transform: scaleX(1);
+}
+
+.navMenu a:after {
+  background-color: currentColor;
+  width: 30px;
+  height: 1px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  transform: scaleX(0);
+  transition: all 0.6s ease;
+  position: absolute;
+  content: "";
+}
+
+.navIsVisible {
+  overflow-y: hidden;
+}
+
+.navIsVisible .navToggle {
+  color: var(--color-secondary);
+}
+
+.navIsVisible .navMenuBg {
+  transform: scale(1);
+}
+
+.navIsVisible .navMenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.navIsVisible .navMenu li {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.navIsVisible .navMenu li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.navIsVisible .navMenu li:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.navIsVisible .navMenu li:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.navIsVisible .navMenu li:nth-child(4) {
+  transition-delay: 0.5s;
 }

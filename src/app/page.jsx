@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="relative bg-[#0D0200] h-full overflow-hidden">
+    <main className="relative bg-primary h-full overflow-hidden">
       <Image
         src="/laboulerouge.jpeg"
         alt="Logo la Boule Rouge"
