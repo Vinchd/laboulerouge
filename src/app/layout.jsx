@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import NavBar from "@/components/NavBar";
 import "./globals.css";
 
 const sackersGothic = localFont({
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${sackersGothic.variable} ${sackersGothic.className} antialiased h-dvh`}
       >
+        <NavBar />
         {children}
       </body>
     </html>
