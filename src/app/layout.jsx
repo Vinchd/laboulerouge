@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr" className="h-dvh">
       <body
-        className={`${sackersGothic.className} ${sackersGothic.variable} ${bickhamScript.variable} antialiased h-dvh`}
+        className={`${sackersGothic.className} ${sackersGothic.variable} ${bickhamScript.variable} antialiased h-dvh bg-secondary text-primary`}
       >
         <NavBar />
         {children}
