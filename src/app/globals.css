@@ -4,6 +4,7 @@
   --color-primary: #0d0200;
   --color-secondary: #e3d7c9;
   --font-sackersgothic: var(--font-sackersgothic);
+  --font-bickhamscript: var(--font-bickhamscript);
 }
 
 /* ----- HIDE SCROLLBAR ----- */
