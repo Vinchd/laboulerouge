@@ -77,6 +77,11 @@ export default function NavBar() {
                 Informations
               </Link>
             </li>
+            <li className={clsx({ active: isActive("/menu") })}>
+              <Link href="/menu" onClick={() => setNavMenuIsOpen(false)}>
+                Menu
+              </Link>
+            </li>
           </ul>
         </div>
         <p className="right-0 bottom-0 absolute opacity-80 mr-6 font-light text-[8px] text-secondary delay-700">

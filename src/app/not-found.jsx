@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="relative flex flex-col justify-center items-center gap-10 bg-primary h-[100dvh] min-h-screen text-2xl">
-      <div className="text-secondary">Page non trouvée</div>
+    <div className="relative flex flex-col justify-center items-center gap-10 bg-secondary h-[100dvh] min-h-screen text-primary">
+      <div className="text-2xl">Page non trouvée</div>
       <Link
         href="/"
-        className="hover:bg-secondary px-12 py-4 border-3 rounded-3xl w-fit font-semibold text-secondary hover:text-primary text-center tracking-wider"
+        className="hover:bg-[#d4c5b4] px-6 py-4 border-3 hover:border-[#fff] rounded-3xl w-fit font-semibold hover:text-[#fff] text-center tracking-wider"
       >
         Retour à l'accueil
       </Link>
