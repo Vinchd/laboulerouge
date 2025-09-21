@@ -36,6 +36,10 @@ export default function Home() {
         priority
         className="top-0 left-0 absolute w-full h-full object-contain"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}
+      />
     </main>
   );
 }
