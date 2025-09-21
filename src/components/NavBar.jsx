@@ -65,20 +65,35 @@ export default function NavBar() {
         <div className="navMenuContainer">
           <ul>
             <li className={clsx({ active: isActive("/") })}>
-              <Link href="/" onClick={() => setNavMenuIsOpen(false)}>
+              <Link
+                href="/"
+                onClick={(e) => {
+                  if (!navMenuIsOpen) e.preventDefault();
+                  else setNavMenuIsOpen(false);
+                }}
+              >
                 Accueil
               </Link>
             </li>
             <li className={clsx({ active: isActive("/informations") })}>
               <Link
                 href="/informations"
-                onClick={() => setNavMenuIsOpen(false)}
+                onClick={(e) => {
+                  if (!navMenuIsOpen) e.preventDefault();
+                  else setNavMenuIsOpen(false);
+                }}
               >
                 Informations
               </Link>
             </li>
             <li className={clsx({ active: isActive("/menu") })}>
-              <Link href="/menu" onClick={() => setNavMenuIsOpen(false)}>
+              <Link
+                href="/menu"
+                onClick={(e) => {
+                  if (!navMenuIsOpen) e.preventDefault();
+                  else setNavMenuIsOpen(false);
+                }}
+              >
                 Menu
               </Link>
             </li>
