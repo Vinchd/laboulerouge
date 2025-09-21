@@ -1,27 +1,25 @@
 import Papa from "papaparse";
 
-// export const metadata = {
-//   title: "Menu - La Boule Rouge",
-//   description:
-//     "Découvrez le menu du Café du Château : Cuisine locale, 100% maison.",
-//   openGraph: {
-//     title: "Menu - La Boule Rouge",
-//     description:
-//       "Parcourez le menu du Café du Château : Cuisine locale, 100% maison.",
-//     url: `${new URL(process.env.NEXT_PUBLIC_SITE_URL)}/menu`,
-//     siteName: "La Boule Rouge",
-//     images: [
-//       {
-//         url: "/logo-opengraph.png",
-//         width: 1242,
-//         height: 1755,
-//         alt: "Logo La Boule Rouge",
-//       },
-//     ],
-//     locale: "fr_FR",
-//     type: "website",
-//   },
-// };
+export const metadata = {
+  title: "Menu - La Boule Rouge",
+  description: "Découvrez le menu de la Boule Rouge.",
+  openGraph: {
+    title: "Menu - La Boule Rouge",
+    description: "Parcourez le menu de la Boule Rouge.",
+    url: `${new URL(process.env.NEXT_PUBLIC_SITE_URL)}/menu`,
+    siteName: "La Boule Rouge",
+    images: [
+      {
+        url: "/logo-opengraph.png",
+        width: 267,
+        height: 200,
+        alt: "Logo La Boule Rouge",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+};
 
 async function getMenu() {
   const res = await fetch(process.env.GOOGLE_SHEET_URL, {
@@ -52,38 +50,38 @@ async function getMenu() {
 export default async function page() {
   const menuPrincipal = await getMenu();
 
-  // const jsonLD = {
-  //   "@context": "https://schema.org",
-  //   "@type": "Restaurant",
-  //   name: "Le Café du Château",
-  //   url: "https://www.lecafeduchateau.fr/menu",
-  //   address: {
-  //     "@type": "PostalAddress",
-  //     streetAddress: "Plage du Château",
-  //     addressLocality: "Pornic",
-  //     postalCode: "44210",
-  //     addressCountry: "FR",
-  //   },
-  //   hasMenu: {
-  //     "@type": "Menu",
-  //     name: "Menu principal",
-  //     hasMenuSection: Object.entries(menuPrincipal).map(
-  //       ([category, items]) => ({
-  //         "@type": "MenuSection",
-  //         name: category,
-  //         hasMenuItem: items.map((item) => ({
-  //           "@type": "MenuItem",
-  //           name: item.nom,
-  //           offers: {
-  //             "@type": "Offer",
-  //             price: item.prix,
-  //             priceCurrency: "EUR",
-  //           },
-  //         })),
-  //       }),
-  //     ),
-  //   },
-  // };
+  const jsonLD = {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    name: "Le Café du Château",
+    url: `${new URL(process.env.NEXT_PUBLIC_SITE_URL)}/menu`,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "1 rue de la Boule Rouge",
+      addressLocality: "Paris",
+      postalCode: "75009",
+      addressCountry: "FR",
+    },
+    hasMenu: {
+      "@type": "Menu",
+      name: "Menu",
+      hasMenuSection: Object.entries(menuPrincipal).map(
+        ([category, items]) => ({
+          "@type": "MenuSection",
+          name: category,
+          hasMenuItem: items.map((item) => ({
+            "@type": "MenuItem",
+            name: item.nom,
+            offers: {
+              "@type": "Offer",
+              price: item.prix,
+              priceCurrency: "EUR",
+            },
+          })),
+        }),
+      ),
+    },
+  };
 
   return (
     <main className="relative flex flex-col bg-secondary pt-20 max-sm:pt-18 pb-12 h-full text-primary">
@@ -121,10 +119,10 @@ export default async function page() {
           </div>
         </div>
       </section>
-      {/* <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}
-      /> */}
+      />
     </main>
   );
 }
