@@ -10,7 +10,7 @@ export default function page() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
-        className="mt-10 mb-6 hover:scale-105 transition duration-300 ease-in"
+        className="mt-8 mb-6 hover:scale-105 transition duration-300 ease-in"
       >
         <div className="font-bickhamscript text-4xl">
           <p>1 rue de la Boule Rouge</p>
