@@ -5,7 +5,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: "La Boule rouge",
-    image: "https://www.laboulerougeparis.fr/logo-opengraph.png",
+    image: "https://www.laboulerougeparis.fr/logo-opengraph.jpg",
     "@id": "https://www.laboulerougeparis.fr/",
     url: "https://www.laboulerougeparis.fr/",
     // telephone: "+33 2 40 82 91 71",
