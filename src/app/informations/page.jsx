@@ -4,7 +4,7 @@ export default function page() {
   return (
     <main className="flex flex-col justify-center items-center w-full h-full text-center">
       <h1 className="mb-16 text-4xl">Horaires d'ouverture</h1>
-      <p>Mercredi au dimanche 19h-2h</p>
+      <p className="font-bickhamscript text-4xl">Mercredi au Dimanche 19h-2h</p>
       <a
         href="https://maps.app.goo.gl/WSRsrLp6tz1jN86u8"
         target="_blank"
@@ -12,7 +12,7 @@ export default function page() {
         aria-label="Instagram"
         className="mt-10 mb-6 hover:scale-105 transition duration-300 ease-in"
       >
-        <div>
+        <div className="font-bickhamscript text-4xl">
           <p>1 rue de la Boule Rouge</p>
           <p>Paris 09</p>
         </div>

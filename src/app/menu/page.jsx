@@ -10,7 +10,7 @@ export const metadata = {
     siteName: "La Boule Rouge",
     images: [
       {
-        url: "/logo-opengraph.png",
+        url: "/logo-opengraph.jpg",
         width: 267,
         height: 200,
         alt: "Logo La Boule Rouge",

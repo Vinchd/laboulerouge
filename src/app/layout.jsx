@@ -64,7 +64,7 @@ export const metadata = {
     siteName: "La Boule Rouge",
     images: [
       {
-        url: "/logo-opengraph.png",
+        url: "/logo-opengraph.jpg",
         width: 267,
         height: 200,
         alt: "Logo La Boule Rouge",
@@ -77,7 +77,7 @@ export const metadata = {
       title: "La Boule Rouge",
       description:
         "Freestyle fine cuisine. Curated wines. Bold cocktails. 75009 Paris. Wednesday to Sunday 7PM 2AM.",
-      images: ["/logo-opengraph.png"],
+      images: ["/logo-opengraph.jpg"],
     },
   },
   robots: {
