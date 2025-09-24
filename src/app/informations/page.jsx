@@ -6,7 +6,7 @@ export default function page() {
       <h1 className="mb-16 text-4xl">Horaires d'ouverture</h1>
       <p className="font-bickhamscript text-4xl">Mercredi au Dimanche 19h-2h</p>
       <a
-        href="https://maps.app.goo.gl/WSRsrLp6tz1jN86u8"
+        href="https://maps.app.goo.gl/MA4Dr2Psv33UdBrP6"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
