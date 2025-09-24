@@ -62,7 +62,7 @@ export default function NavBar() {
           active: navMenuIsOpen,
         })}
       >
-        <div className="navMenuContainer">
+        <div className="font-bickhamscript navMenuContainer">
           <ul>
             <li className={clsx({ active: isActive("/") })}>
               <Link
