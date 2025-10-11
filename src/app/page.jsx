@@ -27,7 +27,7 @@ export default function Home() {
   };
 
   return (
-    <main className="relative bg-primary h-full overflow-hidden">
+    <main className="relative bg-[#010101] h-full overflow-hidden">
       <Image
         src="/laboulerouge.jpeg"
         alt="Logo la Boule Rouge"
