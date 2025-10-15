@@ -6,10 +6,10 @@ export default function page() {
       <h1 className="mb-12 text-4xl">Horaires d'ouverture</h1>
       <p className="font-bickhamscript text-4xl">Mercredi au Dimanche 19h-2h</p>
       <a
-        href="tel:+33670814574"
+        href="tel:+33186048129"
         className="mt-8 font-bickhamscript text-4xl hover:scale-105 duration-300 ease-in"
       >
-        06 70 81 45 74
+        01 86 04 81 29
       </a>
       <a
         href="https://maps.app.goo.gl/MA4Dr2Psv33UdBrP6"
