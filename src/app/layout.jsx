@@ -46,7 +46,7 @@ export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL),
   title: "La Boule Rouge",
   description:
-    "Freestyle fine cuisine. Curated wines. Bold cocktails. 75009 Paris. Wednesday to Sunday 7PM 2AM.",
+    "Freestyle fine cuisine. Curated wines. Bold cocktails. 75009 Paris. Tuesday to Saturday 7PM 2AM.",
   keywords: [
     "restaurant",
     "café",
@@ -60,7 +60,7 @@ export const metadata = {
   openGraph: {
     title: "La Boule Rouge",
     description:
-      "Freestyle fine cuisine. Curated wines. Bold cocktails. 75009 Paris. Wednesday to Sunday 7PM 2AM.",
+      "Freestyle fine cuisine. Curated wines. Bold cocktails. 75009 Paris. Tuesday to Saturday 7PM 2AM.",
     url: new URL(process.env.NEXT_PUBLIC_SITE_URL),
     siteName: "La Boule Rouge",
     images: [
@@ -77,7 +77,7 @@ export const metadata = {
       card: "summary_large_image",
       title: "La Boule Rouge",
       description:
-        "Freestyle fine cuisine. Curated wines. Bold cocktails. 75009 Paris. Wednesday to Sunday 7PM 2AM.",
+        "Freestyle fine cuisine. Curated wines. Bold cocktails. 75009 Paris. Tuesday to Saturday 7PM 2AM.",
       images: ["/logo-opengraph.jpg"],
     },
   },

@@ -23,7 +23,7 @@ export default function Home() {
     },
     servesCuisine: ["Française"],
     priceRange: "€€",
-    openingHours: ["We-Su 19:00-02:00"],
+    openingHours: ["Tu-Sa 19:00-02:00"],
   };
 
   return (
