@@ -4,7 +4,7 @@ export default function page() {
   return (
     <main className="flex flex-col justify-center items-center py-12 w-full min-h-full overflow-y-auto text-center scrollbar-hide">
       <h1 className="mb-12 text-4xl">Horaires d'ouverture</h1>
-      <p className="font-bickhamscript text-4xl">Mercredi au Dimanche 19h-2h</p>
+      <p className="font-bickhamscript text-4xl">Mardi au Samedi 19h-2h</p>
       <a
         href="tel:+33186048129"
         className="mt-8 font-bickhamscript text-4xl hover:scale-105 duration-300 ease-in"
