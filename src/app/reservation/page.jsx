@@ -13,9 +13,13 @@ export default function ReservationPage() {
   }, []);
 
   return (
-    <main className="flex flex-col justify-center items-center py-24 min-h-screen">
-      <div className="px-4 w-full max-w-2xl">
-        <h1 className="mx-12 mb-12 text-4xl text-center">Réserver une table</h1>
+  <main className="relative flex flex-col bg-secondary pt-20 max-sm:pt-18 pb-12 h-full text-primary">
+  <section className="flex-1 overflow-y-auto cursor-default scrollbar-hide">
+    <div className="flex flex-col justify-center items-center px-4 py-8 min-h-full">
+      <div className="w-full max-w-2xl">
+        <h1 className="mb-8 font-bickhamscript max-sm:text-[clamp(64px,2vw,92px)] text-8xl text-center leading-12">
+          Réserver une table
+        </h1>
         <div className="relative bg-[#242625] shadow-lg rounded-2xl overflow-hidden">
           {!isLoaded && (
             <div className="absolute inset-0 flex flex-col justify-center items-center animate-pulse">
@@ -33,6 +37,8 @@ export default function ReservationPage() {
           />
         </div>
       </div>
-    </main>
+    </div>
+  </section>
+</main>
   );
 }

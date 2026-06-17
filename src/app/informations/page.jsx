@@ -3,11 +3,11 @@ import { FaInstagram } from "react-icons/fa";
 export default function page() {
   return (
     <main className="flex flex-col justify-center items-center py-12 w-full min-h-full overflow-y-auto text-center scrollbar-hide">
-      <h1 className="mb-12 text-4xl">Horaires d'ouverture</h1>
-      <p className="font-bickhamscript text-4xl">Mardi au Samedi 19h-2h</p>
+      <h1 className="mx-4 mb-12 font-bickhamscript max-sm:text-[clamp(64px,2vw,92px)] text-8xl leading-12">Horaires d'ouverture</h1>
+      <p>Mardi au Samedi 19h-2h</p>
       <a
         href="tel:+33186048129"
-        className="mt-8 font-bickhamscript text-4xl hover:scale-105 duration-300 ease-in"
+        className="mt-12 hover:scale-105 duration-300 ease-in"
       >
         01 86 04 81 29
       </a>
@@ -16,7 +16,7 @@ export default function page() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
-        className="mt-6 mb-6 font-bickhamscript text-4xl hover:scale-105 transition duration-300 ease-in"
+        className="mt-6 mb-8 hover:scale-105 transition duration-300 ease-in"
       >
         <p>1 rue de la Boule Rouge</p>
         <p>Paris 09</p>
