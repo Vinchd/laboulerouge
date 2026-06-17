@@ -23,7 +23,7 @@ export const metadata = {
 
 async function getMenu() {
   const res = await fetch(process.env.GOOGLE_SHEET_URL, {
-    next: { revalidate: 10 }, // Revalidation toutes les 10s
+    next: { revalidate: 600 },
   });
 
   const csv = await res.text();
@@ -88,24 +88,23 @@ export default async function page() {
       <section className="overflow-y-auto cursor-default scrollbar-hide">
         <div className="flex flex-col items-center mx-auto max-w-3xl">
           <div className="mb-24">
-            <h1 className="mb-16 px-14 max-sm:text-[clamp(32px,6vw,38px)] text-5xl text-center">
-              Menu du soir
+            <h1 className="mb-8 px-14 font-bickhamscript max-sm:text-[clamp(64px,2vw,92px)] text-8xl text-center">
+              Menu
             </h1>
             {Object.entries(menuPrincipal).map(
               ([category, items], idx, arr) => (
-                <div key={category} className="mx-6 mb-6 font-bickhamscript">
-                  <ul className="flex flex-col items-center gap-6">
+                  <ul key={category} className="flex flex-col items-center gap-6 mx-6 mb-6">
                     {items.map((item) => (
                       <li
                         key={item.id}
-                        className="flex flex-col items-center my-1 w-full leading-[1.15]"
+                        className="items-center gap-x-4 grid grid-cols-[1fr_auto] my-1 w-full max-w-lg"
                       >
-                        <div className="relative flex justify-center items-center w-full max-sm:text-[26px] text-4xl text-center tracking-wide">
-                          <p className="w-xs text-balance leading-7">
-                            {item.nom}
-                          </p>
-                          <p className="right-0 absolute">{item.prix}</p>
-                        </div>
+                        <p className="justify-self-center max-sm:text-[clamp(8px,3vw,16px)] text-center text-balance tracking-wide">
+                          {item.nom}
+                        </p>
+                        <p className="font-bickhamscript max-sm:text-[26px] text-4xl whitespace-nowrap">
+                          {item.prix}€
+                        </p>
                       </li>
                     ))}
 
@@ -113,7 +112,7 @@ export default async function page() {
                       <hr className="my-8 border-primary border-t w-30" />
                     )}
                   </ul>
-                </div>
+                
               ),
             )}
           </div>
