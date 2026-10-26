@@ -1,10 +1,15 @@
 import { FaInstagram } from "react-icons/fa";
+import Horaires from "@/components/Horaires";
 
 export default function page() {
   return (
-    <main className="flex flex-col justify-center items-center py-12 w-full min-h-full overflow-y-auto text-center scrollbar-hide">
-      <h1 className="mx-4 mb-12 font-bickhamscript max-sm:text-[clamp(64px,2vw,92px)] text-8xl leading-12">Horaires d'ouverture</h1>
-      <p>Mardi au Samedi 19h-2h</p>
+    <main className="flex flex-col justify-center items-center py-12 w-full min-h-full overflow-y-auto text-center cursor-default scrollbar-hide">
+      <h1 className="mx-4 mb-12 font-bickhamscript max-sm:text-[clamp(64px,2vw,92px)] text-8xl">
+        Horaires d'ouverture
+      </h1>
+      <div className="mx-4 text-[clamp(14px,1.4vw,16px)] max-sm:text-xs">
+        <Horaires />
+      </div>
       <a
         href="tel:+33186048129"
         className="mt-12 hover:scale-105 duration-300 ease-in"
