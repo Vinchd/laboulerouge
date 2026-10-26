@@ -5,9 +5,9 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: "La Boule rouge",
-    image: "https://www.laboulerougeparis.fr/logo-opengraph.jpg",
-    "@id": "https://www.laboulerougeparis.fr/",
-    url: "https://www.laboulerougeparis.fr/",
+    image: `${new URL(process.env.NEXT_PUBLIC_SITE_URL)}logo-opengraph.jpg`,
+    "@id": new URL(process.env.NEXT_PUBLIC_SITE_URL),
+    url: new URL(process.env.NEXT_PUBLIC_SITE_URL),
     telephone: "+33 1 86 04 81 29",
     address: {
       "@type": "PostalAddress",

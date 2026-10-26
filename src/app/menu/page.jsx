@@ -53,8 +53,8 @@ export default async function page() {
   const jsonLD = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    name: "Le Café du Château",
-    url: `${new URL(process.env.NEXT_PUBLIC_SITE_URL)}/menu`,
+    name: "La Boule Rouge",
+    url: `${new URL(process.env.NEXT_PUBLIC_SITE_URL)}menu`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "1 rue de la Boule Rouge",
@@ -93,26 +93,28 @@ export default async function page() {
             </h1>
             {Object.entries(menuPrincipal).map(
               ([category, items], idx, arr) => (
-                  <ul key={category} className="flex flex-col items-center gap-6 mx-6 mb-6">
-                    {items.map((item) => (
-                      <li
-                        key={item.id}
-                        className="items-center gap-x-4 grid grid-cols-[1fr_auto] my-1 w-full max-w-lg"
-                      >
-                        <p className="justify-self-center max-sm:text-[clamp(8px,3vw,16px)] text-center text-balance tracking-wide">
-                          {item.nom}
-                        </p>
-                        <p className="font-bickhamscript max-sm:text-[26px] text-4xl whitespace-nowrap">
-                          {item.prix}€
-                        </p>
-                      </li>
-                    ))}
+                <ul
+                  key={category}
+                  className="flex flex-col items-center gap-6 mx-6 mb-6"
+                >
+                  {items.map((item) => (
+                    <li
+                      key={item.id}
+                      className="items-center gap-x-4 grid grid-cols-[1fr_auto] my-1 w-full max-w-lg"
+                    >
+                      <p className="justify-self-center max-sm:text-[clamp(8px,3vw,16px)] text-center text-balance tracking-wide">
+                        {item.nom}
+                      </p>
+                      <p className="font-bickhamscript max-sm:text-[26px] text-4xl whitespace-nowrap">
+                        {item.prix}€
+                      </p>
+                    </li>
+                  ))}
 
-                    {idx < arr.length - 1 && (
-                      <hr className="my-8 border-primary border-t w-30" />
-                    )}
-                  </ul>
-                
+                  {idx < arr.length - 1 && (
+                    <hr className="my-8 border-primary border-t w-30" />
+                  )}
+                </ul>
               ),
             )}
           </div>
