@@ -24,8 +24,6 @@ export default function NavBar() {
   }, [navMenuIsOpen]);
 
   const isActive = (path) => pathname === path;
-  // const whiteBurger = pathname === "/" || pathname === "/informations";
-  const whiteBurger = pathname === "/";
 
   return (
     <nav className="nav">
@@ -33,11 +31,7 @@ export default function NavBar() {
         {/* Nav toggle */}
         <button
           type="button"
-          className={clsx("navToggle", {
-            active: navMenuIsOpen,
-            "text-secondary": whiteBurger,
-            "text-primary": !whiteBurger,
-          })}
+          className={clsx("navToggle", { active: navMenuIsOpen })}
           onClick={toggleNav}
           aria-label="Toggle navigation"
         >
