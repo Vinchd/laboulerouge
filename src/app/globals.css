@@ -61,6 +61,11 @@
   user-select: none;
   cursor: pointer;
   float: right;
+  color: var(--color-primary);
+}
+
+body:has([data-burger="light"]) .navToggle {
+  color: var(--color-secondary);
 }
 
 .navToggle:not(.active):hover .navNaviconLine.first {

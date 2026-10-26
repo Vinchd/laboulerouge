@@ -31,7 +31,10 @@ export default async function Home() {
   };
 
   return (
-    <main className="relative bg-[#010101] h-full overflow-hidden">
+    <main
+      data-burger="light"
+      className="relative bg-[#010101] h-full overflow-hidden"
+    >
       <Image
         src="/laboulerouge.jpeg"
         alt="Logo la Boule Rouge"
