@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { fetchHoraires, horairesSchemaOrg } from "@/lib/horaires";
 
-export default function Home() {
+export default async function Home() {
+  const horaires = await fetchHoraires();
+
   const jsonLD = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
@@ -23,7 +26,8 @@ export default function Home() {
     },
     servesCuisine: ["Française"],
     priceRange: "€€",
-    openingHours: ["Tu-Sa 19:00-02:00"],
+    openingHours:
+      horaires.length > 0 ? horairesSchemaOrg(horaires) : ["Tu-Sa 19:00-02:00"],
   };
 
   return (
