@@ -22,7 +22,7 @@ export const metadata = {
 };
 
 async function getMenu() {
-  const res = await fetch(process.env.GOOGLE_SHEET_URL, {
+  const res = await fetch(process.env.GOOGLE_SHEET_MENU_URL, {
     next: { revalidate: 600 },
   });
 
