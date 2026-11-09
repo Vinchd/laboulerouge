@@ -12,7 +12,7 @@ export default function page() {
       </div>
       <a
         href="tel:+33186048129"
-        className="mt-12 hover:scale-105 duration-300 ease-in"
+        className="mt-12 hover:text-tertiary hover:scale-105 duration-300 ease-in"
       >
         01 86 04 81 29
       </a>
@@ -21,7 +21,7 @@ export default function page() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
-        className="mt-6 mb-8 hover:scale-105 transition duration-300 ease-in"
+        className="mt-6 mb-8 hover:text-tertiary hover:scale-105 transition duration-300 ease-in"
       >
         <p>1 rue de la Boule Rouge</p>
         <p>Paris 09</p>
@@ -31,7 +31,7 @@ export default function page() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
-        className="hover:scale-105 transition duration-300 ease-in"
+        className="hover:text-tertiary hover:scale-105 transition duration-300 ease-in"
       >
         <FaInstagram className="w-9 h-9" />
       </a>
