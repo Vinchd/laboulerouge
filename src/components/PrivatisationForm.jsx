@@ -78,7 +78,7 @@ export default function PrivatisationForm() {
         <button
           type="submit"
           disabled={isPending}
-          className="self-center hover:bg-primary disabled:opacity-50 shadow-md mt-1 px-8 py-[clamp(5px,1.1dvh,12px)] border-3 border-primary rounded-2xl font-semibold text-primary hover:text-tertiary tracking-wider duration-300 ease-in cursor-pointer disabled:cursor-not-allowed"
+          className="self-center hover:bg-tertiary disabled:opacity-50 shadow-md mt-1 px-8 py-[clamp(5px,1.1dvh,12px)] border-3 border-primary hover:border-tertiary rounded-2xl font-semibold text-primary hover:text-secondary tracking-wider duration-300 ease-in cursor-pointer disabled:cursor-not-allowed"
         >
           {isPending ? "Envoi…" : "Envoyer"}
         </button>
