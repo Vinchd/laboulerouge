@@ -102,6 +102,17 @@ export default function NavBar() {
                 Réservation
               </Link>
             </li>
+            <li className={clsx({ active: isActive("/privatisation") })}>
+              <Link
+                href="/privatisation"
+                onClick={(e) => {
+                  if (!navMenuIsOpen) e.preventDefault();
+                  else setNavMenuIsOpen(false);
+                }}
+              >
+                Privatisation / Groupe
+              </Link>
+            </li>
           </ul>
         </div>
         <p className="right-0 bottom-0 absolute opacity-80 mr-6 font-light text-[8px] text-secondary delay-700">

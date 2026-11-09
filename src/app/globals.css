@@ -2,7 +2,8 @@
 
 @theme inline {
   --color-primary: #0d0200; /*black*/
-  --color-secondary: #e3d7c9; /*white*/
+  --color-secondary: #f5e6d3; /*white*/
+  --color-tertiary: #871105; /*red*/
   --font-sackersgothic: var(--font-sackersgothic);
   --font-bickhamscript: var(--font-bickhamscript);
 }
@@ -222,4 +223,8 @@ body:has([data-burger="light"]) .navToggle {
 
 .navIsVisible .navMenu li:nth-child(4) {
   transition-delay: 0.5s;
+}
+
+.navIsVisible .navMenu li:nth-child(5) {
+  transition-delay: 0.6s;
 }
