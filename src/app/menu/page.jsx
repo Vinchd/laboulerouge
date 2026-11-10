@@ -23,7 +23,7 @@ export const metadata = {
 
 async function getMenu() {
   const res = await fetch(process.env.GOOGLE_SHEET_MENU_URL, {
-    next: { revalidate: 600 },
+    next: { revalidate: 3600 },
   });
 
   const csv = await res.text();
@@ -84,7 +84,7 @@ export default async function page() {
   };
 
   return (
-    <main className="relative flex flex-col bg-secondary pt-20 max-sm:pt-18 pb-12 h-full text-primary">
+    <main className="relative flex flex-col bg-secondary pt-20 max-sm:pt-18 pb-12 h-full">
       <section className="overflow-y-auto cursor-default scrollbar-hide">
         <div className="flex flex-col items-center mx-auto max-w-3xl">
           <div className="mb-24">

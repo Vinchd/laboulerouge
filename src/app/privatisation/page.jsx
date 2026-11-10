@@ -9,10 +9,9 @@ export const metadata = {
 
 export default function PrivatisationPage() {
   return (
-    <main className="flex flex-col items-center gap-[clamp(8px,2dvh,20px)] px-4 pt-[clamp(52px,8dvh,88px)] pb-[clamp(12px,3dvh,32px)] h-full overflow-y-auto text-center cursor-default scrollbar-hide">
-      <h1 className="font-bickhamscript text-[clamp(40px,min(10dvh,16vw),96px)] text-balance leading-none">
-        <span className="whitespace-nowrap">Privatisation /</span>{" "}
-        <span className="block sm:inline"> Groupe</span>
+    <main className="flex flex-col items-center gap-[clamp(8px,2dvh,20px)] px-4 pt-20 pb-[clamp(12px,3dvh,32px)] h-full overflow-y-auto text-center cursor-default scrollbar-hide">
+      <h1 className="font-bickhamscript text-[clamp(40px,min(10dvh,14vw),96px)] text-balance leading-none">
+        <span className="whitespace-nowrap">Privatisation / Groupe</span>
       </h1>
 
       <div className="relative flex-1 shadow-lg rounded-xl w-full max-w-3xl min-h-[12dvh] overflow-hidden basis-0">
