@@ -2,7 +2,7 @@
 
 @theme inline {
   --color-primary: #0d0200; /*black*/
-  --color-secondary: #f5e6d3; /*white*/
+  --color-secondary: #f9f0d3; /*white*/
   --color-tertiary: #871105; /*red*/
   --font-sackersgothic: var(--font-sackersgothic);
   --font-bickhamscript: var(--font-bickhamscript);
@@ -65,6 +65,7 @@
   color: var(--color-primary);
 }
 
+/* Ajouter data-burger="light" sur une page pour passer le burger en color-secondary */
 body:has([data-burger="light"]) .navToggle {
   color: var(--color-secondary);
 }

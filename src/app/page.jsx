@@ -31,18 +31,29 @@ export default async function Home() {
   };
 
   return (
-    <main
-      data-burger="light"
-      className="relative bg-[#010101] h-full overflow-hidden"
-    >
+    <main className="relative bg-[#010101] h-full overflow-hidden">
       <Image
-        src="/laboulerouge.jpeg"
-        alt="Logo la Boule Rouge"
-        sizes="(max-width: 500px) 100vw, (max-width: 800px) 100vw, (max-width: 1080px) 100vw, 100vw"
+        src="/laboulerouge-plat.jpg"
+        alt="plat restauration"
+        sizes="100vw"
         fill
         priority
-        className="top-0 left-0 absolute w-full h-full object-contain"
+        className="object-cover"
       />
+
+      <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+        <div className="relative w-[min(70vw,260px)] max-sm:w-[min(70vw,120px)] h-[min(45dvh,460px)]">
+          <Image
+            src="/laboulerouge-logo-blanc.png"
+            alt="Logo la Boule Rouge"
+            sizes="(max-width: 640px) 70vw, 260px"
+            fill
+            priority
+            className="object-contain"
+          />
+        </div>
+      </div>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}

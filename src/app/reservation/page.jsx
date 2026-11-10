@@ -14,7 +14,7 @@ export default function ReservationPage() {
   }, []);
 
   return (
-    <main className="relative flex flex-col bg-secondary pt-20 max-sm:pt-18 pb-12 h-full text-primary">
+    <main className="relative flex flex-col bg-secondary pt-20 max-sm:pt-18 pb-12 h-full">
       <section className="flex-1 overflow-y-auto cursor-default scrollbar-hide">
         <div className="flex flex-col justify-center items-center px-4 py-8 min-h-full">
           <div className="w-full max-w-2xl">
