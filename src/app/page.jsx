@@ -33,7 +33,7 @@ export default async function Home() {
   return (
     <main className="relative bg-[#010101] h-full overflow-hidden">
       <Image
-        src="/laboulerouge-plat.jpg"
+        src="/laboulerouge-plat.webp"
         alt="plat restauration"
         sizes="100vw"
         fill
