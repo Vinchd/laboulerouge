@@ -60,14 +60,12 @@ export default function PrivatisationForm() {
         />
 
         {/* Champ piège anti-spam, invisible pour les humains */}
-        <input
-          type="text"
-          name="website"
-          tabIndex={-1}
-          autoComplete="off"
+        <div
+          className="-z-10 absolute opacity-0 pointer-events-none"
           aria-hidden="true"
-          className="top-0 left-[9999px] absolute"
-        />
+        >
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+        </div>
 
         {state.status === "error" && (
           <p role="alert" className="font-semibold text-sm">
