@@ -107,7 +107,7 @@ body:has([data-burger="light"]) .navToggle {
 }
 
 .navMenuBg {
-  background-color: var(--color-primary);
+  background-color: var(--color-tertiary);
   width: 100%;
   height: 100%;
   transform: scaleY(0);
