@@ -23,7 +23,11 @@ export default function ReservationPage() {
             </h1>
             <div className="mb-6 text-sm text-center">
               Pour toute demande de 10 personnes et plus,{" "}
-              <Link href="/privatisation" className="group whitespace-nowrap">
+              <Link
+                href="/privatisation"
+                prefetch={false}
+                className="group whitespace-nowrap"
+              >
                 merci de nous contacter{" "}
                 <span className="group-hover:text-tertiary underline">ici</span>
               </Link>
