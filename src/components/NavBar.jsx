@@ -61,6 +61,7 @@ export default function NavBar() {
             <li className={clsx({ active: isActive("/") })}>
               <Link
                 href="/"
+                prefetch={false}
                 onClick={(e) => {
                   if (!navMenuIsOpen) e.preventDefault();
                   else setNavMenuIsOpen(false);
@@ -72,6 +73,7 @@ export default function NavBar() {
             <li className={clsx({ active: isActive("/informations") })}>
               <Link
                 href="/informations"
+                prefetch={false}
                 onClick={(e) => {
                   if (!navMenuIsOpen) e.preventDefault();
                   else setNavMenuIsOpen(false);
@@ -94,6 +96,7 @@ export default function NavBar() {
             <li className={clsx({ active: isActive("/reservation") })}>
               <Link
                 href="/reservation"
+                prefetch={false}
                 onClick={(e) => {
                   if (!navMenuIsOpen) e.preventDefault();
                   else setNavMenuIsOpen(false);
@@ -105,6 +108,7 @@ export default function NavBar() {
             <li className={clsx({ active: isActive("/privatisation") })}>
               <Link
                 href="/privatisation"
+                prefetch={false}
                 onClick={(e) => {
                   if (!navMenuIsOpen) e.preventDefault();
                   else setNavMenuIsOpen(false);
